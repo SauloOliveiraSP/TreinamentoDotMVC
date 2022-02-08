@@ -8,6 +8,8 @@ namespace TreinamentoDotMVC.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
+        List<UserViewModel> usuarios = new List<UserViewModel>();
+
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
@@ -20,7 +22,14 @@ namespace TreinamentoDotMVC.Controllers
 
         public IActionResult Consultar()
         {
-            return View();
+            return View(usuarios);
+        }
+
+        [HttpPost]
+        public IActionResult Index(UserViewModel user)
+        {
+            usuarios.Add(user);
+            return View("Consultar", usuarios);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

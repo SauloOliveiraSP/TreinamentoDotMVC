@@ -2,58 +2,67 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <div class="conteiner">
-        <div class="box-1">
-            <div class="box-titulos">
-                <div class="titulo">Código</div>
-                <div class="titulo">Pessoa</div>
-                <div class="titulo">CPF/CNPJ</div>
-                <div class="titulo">Fantasia</div>
-                <div class="titulo">Nome</div>
-                <div class="titulo">Cep</div>
-                <div class="titulo">Endereço</div>
-                <div class="titulo">Cidade</div>
-                <div class="titulo">UF</div>
-            </div>
-            <div class="box-inputs">
-                <input class="input"/>
-                <input class="input"/>
-                <input class="input"/>
-                <input class="input"/>
-                <input class="input"/>
-                <input class="input"/>
-                <input class="input"/>
-                <input class="input"/>
-                <input class="input"/>
+@model UserViewModel
+
+<div>
+
+    @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+    {
+        <h1> Cadastro </h1>
+        <div class="text-center">
+            <div class="conteiner">
+                <div class="box-1">
+                    <div class="box-titulos">
+                        <div class="titulo">Código</div>
+                        <div class="titulo">Pessoa</div>
+                        <div class="titulo">CPF/CNPJ</div>
+                        <div class="titulo">Fantasia</div>
+                        <div class="titulo">Nome</div>
+                        <div class="titulo">Cep</div>
+                        <div class="titulo">Endereço</div>
+                        <div class="titulo">Cidade</div>
+                        <div class="titulo">UF</div>
+                    </div>
+                    <div class="box-inputs">
+                        @Html.TextBoxFor(x => x.Codigo)
+                        @Html.TextBoxFor(x => x.Pessoa)
+                        @Html.TextBoxFor(x => x.Cpf)
+                        @Html.TextBoxFor(x => x.Fantasia)
+                        @Html.TextBoxFor(x => x.Nome)
+                        @Html.TextBoxFor(x => x.Cep)
+                        @Html.TextBoxFor(x => x.Endereco)
+                        @Html.TextBoxFor(x => x.Cidade)
+                        @Html.TextBoxFor(x => x.Uf)
+                    </div>
+                </div>
+                <div class="box-2">
+                    <div class="box-titulos">
+                        <div class="titulo">País</div>
+                        <div class="titulo">Bairro</div>
+                        <div class="titulo">Fundação/Aniv.</div>
+                        <div class="titulo">Telefone</div>
+                        <div class="titulo">E-mail</div>
+                        <div class="titulo">Homepage</div>
+                        <div class="titulo">Obs</div>
+                        <div class="titulo">Inscr. Estadual</div>
+                        <div class="titulo">Incr. Municipal</div>
+                    </div>
+                    <div class="box-inputs">
+                        @Html.TextBoxFor(x => x.Pais)
+                        @Html.TextBoxFor(x => x.Bairro)
+                        @Html.TextBoxFor(x => x.Fundacao)
+                        @Html.TextBoxFor(x => x.Telefone)
+                        @Html.TextBoxFor(x => x.Email)
+                        @Html.TextBoxFor(x => x.Homepage)
+                        @Html.TextBoxFor(x => x.Obs)
+                        @Html.TextBoxFor(x => x.InscricaoEstadual)
+                        @Html.TextBoxFor(x => x.InscricaoMunicipal)
+                    </div>
+                </div>
+                <div class="box-3">
+                    <button class="button-add">Adicionar</button>
+                </div>
             </div>
         </div>
-        <div class="box-2">
-            <div class="box-titulos">
-                <div class="titulo">País</div>
-                <div class="titulo">Bairro</div>
-                <div class="titulo">Fundação/Aniv.</div>
-                <div class="titulo">Telefone</div>
-                <div class="titulo">E-mail</div>
-                <div class="titulo">Homepage</div>
-                <div class="titulo">Obs</div>
-                <div class="titulo">Inscr. Estadual</div>
-                <div class="titulo">Incr. Municipal</div>
-            </div>
-              <div class="box-inputs">
-               <input class="input"/>
-               <input class="input"/>
-               <input class="input"/>
-               <input class="input"/>
-               <input class="input"/>
-               <input class="input"/>
-               <input class="input"/>
-               <input class="input"/>
-               <input class="input"/>
-            </div>
-        </div>
-        <div class="box-3">
-            <button class="button-add">Adicionar</button>
-        </div> 
-    </div>
+    }
 </div>
