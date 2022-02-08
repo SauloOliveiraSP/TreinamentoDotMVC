@@ -18,7 +18,7 @@ namespace TreinamentoDotMVC.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Consultar()
         {
             return View();
         }
