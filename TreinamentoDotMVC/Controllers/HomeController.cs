@@ -4,11 +4,11 @@ using TreinamentoDotMVC.Models;
 
 namespace TreinamentoDotMVC.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController :Controller
     {
         private readonly ILogger<HomeController> _logger;
 
-        List<UserViewModel> usuarios = new List<UserViewModel>();
+      static List<UserViewModel> usuarios = new List<UserViewModel>();
 
         public HomeController(ILogger<HomeController> logger)
         {
