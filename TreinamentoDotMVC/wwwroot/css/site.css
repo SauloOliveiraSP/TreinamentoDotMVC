@@ -8,11 +8,49 @@ html {
   }
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+body {
+  margin-top: 10px;
 }
 
-body {
-  margin-bottom: 60px;
+.conteiner {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.box-1 {
+    display: flex;
+    flex-direction: row;
+
+    padding: 0em 7em 0em 0em;
+}
+
+.box-2 {
+    display: flex;
+    flex-direction: row;
+}
+
+.box-titulos {
+    padding-right: 2em;
+}
+
+.titulo {
+    margin-bottom: 2.35em;
+}
+
+.box-inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.input {
+    margin-bottom: 2em;
+}
+
+input {
+    width: 350px;
+}
+
+.button-add {
+    margin-left: 3em;
 }
