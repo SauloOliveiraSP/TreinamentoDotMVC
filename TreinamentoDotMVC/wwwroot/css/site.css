@@ -16,6 +16,8 @@ body {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+
+    margin-top: 2em;
 }
 
 .box-1 {
@@ -54,3 +56,28 @@ input {
 .button-add {
     margin-left: 3em;
 }
+
+table {
+    border-color: dimgray;
+    border-style: solid;
+    border-width: 2px;
+}
+
+th {
+    border-color: dimgray;
+    border-style: solid;
+    border-width: 2px;
+
+    width:500px;
+}
+
+td {
+    border-color: dimgray;
+    border-style: solid;
+    border-width: 2px;
+}
+
+.table {
+    margin-top: 2em;
+}
+
