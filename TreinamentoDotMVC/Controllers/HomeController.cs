@@ -31,24 +31,20 @@ namespace TreinamentoDotMVC.Controllers
         {
             _logger = logger;
         }
-
         public IActionResult Index()
         {
             return View();
         }
-
         public IActionResult Consultar()
         {
             return View(usuarios);
         }
-
         [HttpPost]
         public IActionResult Index(UserViewModel user)
         {
             usuarios.Add(user);
             return View("Consultar", usuarios);
         }
-
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

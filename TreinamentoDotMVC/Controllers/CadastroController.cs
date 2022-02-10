@@ -19,9 +19,8 @@ namespace TreinamentoDotMVC.Controllers
         {
             return View(usuarios);
         }
-
-
         [HttpPost]
+
         public IActionResult Consultar(UserViewModel user)
         {
             usuarios.Add(user);
