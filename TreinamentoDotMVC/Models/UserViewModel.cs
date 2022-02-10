@@ -1,4 +1,8 @@
-﻿using System;
+﻿//using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+
 namespace TreinamentoDotMVC.Models
 {
 	public class UserViewModel
@@ -15,7 +19,7 @@ namespace TreinamentoDotMVC.Models
 		public string Pais { get; set; }
 		public string Bairro { get; set; }
 		public string Fundacao { get; set; }
-		public int Telefone { get; set; }
+		public string Telefone { get; set; }
 		public string Email { get; set; }
 		public string Homepage { get; set; }
 		public string Obs { get; set; }
