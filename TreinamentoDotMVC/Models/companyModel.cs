@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Data.Common;
 using System.Data;
-using System.Data.OleDb;
 using System.Data.SqlClient;
 using System.Configuration;
 
@@ -25,7 +24,7 @@ namespace CompanyModel.Models
              try
             {
                 // Obtemos os dados da conexão existentes no WebConfig
-                string dadosConexao = "SERVER=SBD\\SQL2016;UID=sa;PWD=spypreto;DATABASE=volpepwiteste";
+                string dadosConexao = "SERVER = sbd\\sql2016; UID = sa; PWD = spypreto; DATABASE = VolpePwiTeste";
                 // Instanciando o objeto SqlConnection
                 Connection = new SqlConnection(dadosConexao);
                 //Verifica se a conexão esta fechada.
@@ -110,9 +109,9 @@ namespace CompanyModel.Models
 
                 return dtresult;
             }
-            catch (Exception ex)
+            catch (SqlException ex)
             {
-               throw ex;
+                throw ex;
             }
         }
 
@@ -128,7 +127,7 @@ namespace CompanyModel.Models
                 Connection.Close();
                 return result;
             }
-            catch (Exception ex)
+            catch (SqlException ex)
             {
                 throw ex;
             }
