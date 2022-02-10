@@ -1,6 +1,9 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace TreinamentoDotMVC.Models
-{
+{	[Table("Funcionarios")]
 	public class UserViewModel
 	{
 		public int Codigo { get; set; }

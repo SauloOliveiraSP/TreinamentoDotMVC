@@ -14,6 +14,7 @@ namespace TreinamentoDotMVC.Controllers
         List<UserViewModel> usuarios = new List<UserViewModel>();
         // GET: /<controller>/
 
+
         public IActionResult Consultar()
         {
             return View(usuarios);
@@ -28,4 +29,7 @@ namespace TreinamentoDotMVC.Controllers
         }
     }
 }
+
+
+
 
