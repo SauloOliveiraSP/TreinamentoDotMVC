@@ -7,20 +7,17 @@
         <table border="1">
             <thead>
                 <tr>
-                    <th>Código</th>
-                    <th>Pessoa</th>
-                    <th>CPF/CNPJ</th>
                     <th>Fantasia</th>
-                    <th>Nome</th>
-                    <th>E-mail</th>
-                    <th>Telefone</th>
-                    <th>Cep</th>
+                    <th>Razão</th>
                     <th>Endereço</th>
+                    <th>Bairro</th>
                     <th>Cidade</th>
                     <th>UF</th>
-                    <th>País</th>
-                    <th>Bairro</th>
-                    <th>Fundação/Aniv</th>
+                    <th>Cep</th>
+                    <th>Telefone</th>
+                    <th>E-mail</th>
+                    <th>Homepage</th>
+                    <th>Obs</th>
                 </tr>
             </thead>
             <tbody>
@@ -28,19 +25,18 @@
                 {
                 <tr>
                     <td> @usuarios.Codigo</td>
-                    <td> @usuarios.Pessoa</td>
-                    <td> @usuarios.Cpf </td>
-                    <td> @usuarios.Fantasia </td>
-                    <td> @usuarios.Nome </td>
-                    <td> @usuarios.Email</td>
-                    <td> @usuarios.Telefone</td>
-                    <td> @usuarios.Cep</td>
-                    <td> @usuarios.Endereco</td>
+                    <td> @usuarios.Fantasia</td>
+                    <td> @usuarios.Razao </td>
+                    <td> @usuarios.Endereco </td>
+                    <td> @usuarios.Bairro </td>
                     <td> @usuarios.Cidade</td>
                     <td> @usuarios.Uf</td>
-                    <td> @usuarios.Pais</td>
-                    <td> @usuarios.Bairro</td>
-                    <td> @usuarios.Fundacao</td>
+                    <td> @usuarios.Cep</td>
+                    <td> @usuarios.Telefone</td>
+                    <td> @usuarios.Email</td>
+                    <td> @usuarios.Homepage</td>
+                    <td> @usuarios.Obs</td>
+                    <td><button type="submit" class="btn btn-info">Alterar</button><button type="submit" class="btn btn-danger">Remover</button></td>
                 </tr>
                 }
             </tbody>
