@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using TreinamentoDotMVC.Models;
-using CompanyModel.Models;
 using System.Data.SqlClient;
 using System.Data;
+using TreinamentoDotMVC.Data;
 
 namespace TreinamentoDotMVC.Controllers
 {
@@ -15,16 +15,6 @@ namespace TreinamentoDotMVC.Controllers
 
         DataAccess db = new DataAccess();
 
-        public DataTable getCompanyId (int id)
-        {
-            id = 1;
-            db.cleanParameters();
-            string SQL = "@ SELECT * FROM TR_EMPRESA where pk_id = @id";
-
-            db.AdicionarParametro("@id", SqlDbType.Int, id);
-
-            return db.ExecConsult(SQL);
-        }
 
 
         public HomeController(ILogger<HomeController> logger)

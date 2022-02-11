@@ -26,4 +26,7 @@
       <Guid>bee4bfec-6683-3e67-9167-3c0cbc68f40a</Guid>
     </COMReference>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Service\" />
+  </ItemGroup>
 </Project>
