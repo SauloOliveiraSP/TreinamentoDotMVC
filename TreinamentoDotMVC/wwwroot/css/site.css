@@ -48,10 +48,6 @@ input {
     width: 350px;
 }
 
-.button-add {
-    margin-left: 3em;
-}
-
 table {
     border-color: dimgray;
     border-style: solid;
