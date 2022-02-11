@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Data.Common;
 using System.Data;
-using System.Data.OleDb;
 using System.Data.SqlClient;
 using System.Configuration;
+
 
 namespace CompanyModel.Models
 {
@@ -27,7 +27,9 @@ namespace CompanyModel.Models
                 // Obtemos os dados da conexão existentes no WebConfig
                 string dadosConexao = "SERVER=SBD\\SQL2016;UID=sa;PWD=spypreto;DATABASE=volpepwiteste";
                 // Instanciando o objeto SqlConnection
-                Connection = new SqlConnection(dadosConexao);
+
+                SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder(dadosConexao);
+                Connection = new SqlConnection(builder.ConnectionString);
                 //Verifica se a conexão esta fechada.
                 if (Connection.State == ConnectionState.Closed)
                 {
@@ -43,15 +45,15 @@ namespace CompanyModel.Models
             }
         }   
 
-        // public void Open()
-        // {
-        //    Connection.Open();
-        // } 
+        public void Open()
+        {
+            Connection.Open();
+        } 
 
-        // public void Close()
-        // {
-        //     Connection.Close();
-        // }
+        public void Close()
+        {
+            Connection.Close();
+        }
 
         public void AddParameters(string name, SqlDbType type, int size, object value)
         {
